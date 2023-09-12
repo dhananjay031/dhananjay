@@ -1,38 +1,284 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: '',sans-serif;
+  /* font-family: 'Raleway'; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  height:100%;
+  width:100%;
+  background: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  position: relative;
+}
+
+.header{
+    color: #fff;
+    font-weight:bold;
+    height: 70px;
+    font-size: 20px;
+    background: linear-gradient(68.6deg, rgb(2, 5, 19) 38.1%, rgb(7, 8, 37) 93.1%);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    top: 0;
+    z-index: 1000;
+    position:fixed;
+    
+}
+
+.main{
+  padding-left: 100px;
+  padding-top: 15px;
+}
+
+.sub{
+   display: flex;
+   padding: 20px 50px 10px 10px;
+   justify-content: space-between;
+   gap: 20px;
+}
+
+.sub h3{
+  cursor:pointer;
+}
+
+.sub h3:hover{
+  color: aqua;
+  transition:1s;
+}
+
+.body{
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  bottom: 0;
+  margin-top: 10rem;
+}
+
+
+.aboutMe{
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.leftSection{
+  width: 50vh;
+  font-weight:bolder;
+  color: #fff;
+}
+
+.rightSection{
+  width: 50vh;
+  padding-left: 40px;
+}
+
+.leftSection p{
+  margin-top: 10px;
+}
+
+.post{
+  display: flex;
+}
+
+.mainPost{
+  padding-left: 5px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  width: 85%;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1px solid;
+  color: aqua;
+  animation: typing 2s steps(18),
+  cursor 3s step-end infinite alternate;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes cursor {
+  50% { border-color: transparent}
+}
+
+@keyframes typing{
+  from {width: 0}
+}
+
+ .img{
+     width: 250px;
+     height: 250px;
+     border-radius: 50%;
+     box-shadow: 0 0 10px 5px aqua;
+     /* border: 5px solid aqua; */
+ }
+
+ .icon1{
+  color: rgb(30, 110, 150);
+ }
+
+ .icon2{
+  color: rgb(48, 182, 124);
+  margin-left: 30px;
+ }
+
+ .icon1 , .icon2{
+  height: 50px;
+  width: 50px;
+  padding: 9px;
+  border-radius: 50%;
+  border: 2px solid aqua;
+ }
+
+ .mySkills{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 20px;
+  font-size: 20px;
+  font-weight:800;
+  color: #fff;
+ }
+
+ .skill{
+  color: aqua;
+  margin-left: 5px;
+ }
+
+ .skillContainer{
+  display: flex;
+  flex-direction: column;
+ }
+
+ .skillButtons{
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
+  color: #fff;
+  font-size: 15px;
+  font-weight:700;
+ }
+
+ .button{
+  border: 1px solid #fff;
+  padding: 5px;
+ }
+
+ .button:hover{
+  border-color: aquamarine;
+  color: aquamarine;
+  cursor: pointer;
+ }
+
+ .skillsBarContainer{
+   display: flex;
+   justify-content: space-around;
+ }
+
+ .technicalBarContainer{
+  display: flex;
+  flex-direction: column;
+ }
+
+ .bar{
+  color: #fff;
+  margin-top: 20px;
+  height: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ .bar1{
+    height: 6px;
+    width: 260px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #fff;
+    margin-left: 10px;
+ }
+
+ .common{
+  height: 6px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: aqua;
+ }
+
+ .barType1 {
+  max-width: 70%;
+ }
+
+ .barType2 {
+  max-width: 80%;
+ }
+
+ .barType3{
+  max-width: 50%;
+ }
+
+
+.others{
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 30px;
+}
+ 
+.com{
+  height: 100px;
+  width: 100px;
+  border: 5px solid aqua;
+  border-radius:50%;
+  color: #fff;
+  padding: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.percent ,.name{
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.name{
+  justify-content: space-between;
+}
+
+.formContainer{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.inputContainer{
+  color: aquamarine;
+}
+
+.formleftSection{
+  color: aqua;
+  font-size: 50px;
+  font-weight: 900;
+  padding-top: 100px;
+}
+
+.form{
+  color: aquamarine;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+.input{
+  color: #09203f;
+  font-size: 15px;
+  border: 1px solid aqua;
+}
+
+.iconContainer{
+  display: flex;
 }
